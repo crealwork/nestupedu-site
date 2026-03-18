@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문의하기 | Nest Up Education</title>
+  <meta name="description" content="Nest Up Education 문의하기 - 카카오톡, 전화, 이메일로 상담하세요">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Nest Up Education">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">홈페이지</a></li>
+        <li><a href="about.html">학원 소개</a></li>
+        <li><a href="curriculum.html">커리큘럼</a></li>
+        <li><a href="teachers.html">선생님 소개</a></li>
+        <li><a href="contact.html" class="nav-cta">문의하기</a></li>
+      </ul>
+      <button class="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container fade-in">
+      <span class="section-label">Contact Us</span>
+      <h1 class="page-hero-title">문의하기</h1>
+      <p class="page-hero-desc">캐나다 대입 성공의 첫 걸음, 지금 상담하세요.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form fade-in-left">
+          <h2 style="font-size:1.4rem;margin-bottom:8px;font-family:var(--font-heading);">상담 문의</h2>
+          <p style="font-size:0.9rem;color:var(--color-text-muted);margin-bottom:28px;">아래 양식을 작성해주시면 빠르게 연락드리겠습니다.</p>
+          <form action="#" method="POST">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div class="form-group">
+                <label class="form-label" for="name">학생 이름</label>
+                <input type="text" id="name" class="form-input" placeholder="학생 이름을 입력하세요">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="grade">학년</label>
+                <input type="text" id="grade" class="form-input" placeholder="예: Grade 10">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="parent">학부모 이름</label>
+              <input type="text" id="parent" class="form-input" placeholder="학부모 이름을 입력하세요">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">연락처</label>
+              <input type="tel" id="phone" class="form-input" placeholder="전화번호를 입력하세요">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">이메일</label>
+              <input type="email" id="email" class="form-input" placeholder="이메일 주소를 입력하세요">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">관심 과목</label>
+              <input type="text" id="subject" class="form-input" placeholder="예: AP Calculus, Physics">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">문의 내용</label>
+              <textarea id="message" class="form-textarea" placeholder="궁금하신 내용을 자유롭게 작성해주세요."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">상담 신청하기</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-cards fade-in-right">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <h3 class="contact-info-title">전화 문의</h3>
+              <p class="contact-info-text"><a href="tel:7788235813" style="color:var(--color-primary);font-weight:600;">778-823-5813</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-primary)"><path d="M12 3C6.5 3 2 6.58 2 11c0 2.84 1.88 5.33 4.7 6.77l-.96 3.56c-.07.25.22.45.44.31L10.3 18.9c.55.07 1.12.1 1.7.1 5.5 0 10-3.58 10-8s-4.5-8-10-8z"/></svg>
+            </div>
+            <div>
+              <h3 class="contact-info-title">카카오톡 상담</h3>
+              <p class="contact-info-text"><a href="https://open.kakao.com/me/nestup" target="_blank" style="color:var(--color-primary);font-weight:600;">카카오톡으로 문의하기</a></p>
+              <p class="contact-info-text">빠르고 편리한 상담이 가능합니다.</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div>
+              <h3 class="contact-info-title">이메일</h3>
+              <p class="contact-info-text"><a href="mailto:info@nestupedu.com" style="color:var(--color-primary);font-weight:600;">info@nestupedu.com</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h3 class="contact-info-title">찾아오시는 길</h3>
+              <p class="contact-info-text">3056 Glen Dr unit 304,<br>Coquitlam, BC</p>
+              <p class="contact-info-text" style="margin-top:4px;font-size:0.85rem;">코퀴틀람 센터역 바로 옆</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <h3 class="contact-info-title">운영 시간</h3>
+              <p class="contact-info-text">월 - 금: 3:00 PM - 9:00 PM<br>토: 10:00 AM - 5:00 PM<br>일: 휴무</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Location</span>
+        <h2 class="section-title">찾아오시는 길</h2>
+        <p class="section-desc">3056 Glen Dr unit 304, Coquitlam, BC — 코퀴틀람 센터역 바로 옆</p>
+      </div>
+      <div class="map-container fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5!2d-122.7944!3d49.2744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3056+Glen+Dr%2C+Coquitlam%2C+BC!5e0!3m2!1sen!2sca!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="fade-in" style="position:relative;z-index:1;">
+        <h2 class="cta-title">지금 바로 상담하세요!</h2>
+        <p class="cta-desc">캐나다 대입 성공의 열쇠, Nest Up Education과 함께 하세요</p>
+        <div class="cta-buttons">
+          <a href="https://open.kakao.com/me/nestup" target="_blank" class="btn btn-kakao">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.58 2 11c0 2.84 1.88 5.33 4.7 6.77l-.96 3.56c-.07.25.22.45.44.31L10.3 18.9c.55.07 1.12.1 1.7.1 5.5 0 10-3.58 10-8s-4.5-8-10-8z"/></svg>
+            카톡 상담
+          </a>
+          <a href="tel:7788235813" class="btn btn-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 778-823-5813</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Nest Up Education" class="footer-logo">
+          <p>코퀴틀람에 자리 잡은 Nest Up Education은 캐나다 대입 전문 학원입니다. Pre-calculus, English, Physics, Chemistry, 그리고 AP Calculus를 비롯한 다양한 AP 수업을 제공합니다.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">바로가기</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">홈페이지</a></li>
+            <li><a href="about.html">학원 소개</a></li>
+            <li><a href="curriculum.html">커리큘럼</a></li>
+            <li><a href="teachers.html">선생님 소개</a></li>
+            <li><a href="contact.html">문의하기</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">연락처</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>3056 Glen Dr unit 304,<br>Coquitlam, BC</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@nestupedu.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>778-823-5813</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nest Up Education. All rights reserved.</p>
+        <p>Website built by <a href="https://crealwork.com/" target="_blank">CREAL</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

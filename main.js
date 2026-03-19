@@ -26,8 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Navbar scroll effect ---
   const nav = document.querySelector('.nav');
   if (nav) {
+    // Pages without dark hero should have scrolled (dark) nav immediately
+    const hasHero = document.querySelector('.hero');
+    if (!hasHero) {
+      nav.classList.add('scrolled');
+    }
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
+      if (hasHero) {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+      }
     }, { passive: true });
   }
 
@@ -78,17 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const el = entry.target;
-          const target = parseInt(el.dataset.count);
+          const isDecimal = el.dataset.decimal === 'true';
+          const target = isDecimal ? parseFloat(el.dataset.count) : parseInt(el.dataset.count);
           const suffix = el.dataset.suffix || '';
           let current = 0;
-          const step = Math.max(1, Math.floor(target / 40));
+          const totalSteps = 40;
+          const step = isDecimal ? target / totalSteps : Math.max(1, Math.floor(target / totalSteps));
           const timer = setInterval(() => {
             current += step;
             if (current >= target) {
               current = target;
               clearInterval(timer);
             }
-            el.textContent = current + suffix;
+            el.textContent = (isDecimal ? current.toFixed(1) : Math.round(current)) + suffix;
           }, 30);
           counterObserver.unobserve(el);
         }

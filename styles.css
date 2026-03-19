@@ -49,7 +49,7 @@
   --color-card-bg: #FFFFFF;
 
   /* Typography */
-  --font-heading: 'Gowun Batang', serif;
+  --font-heading: 'Wanted Sans', 'Pretendard', sans-serif;
   --font-body: 'Pretendard', 'Noto Sans KR', sans-serif;
 
   /* Spacing */
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   color: var(--color-heading);
   line-height: 1.3;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 /* --- Utility --- */
@@ -256,6 +256,10 @@ h1, h2, h3, h4, h5 {
 
 .nav.scrolled .hamburger span {
   background: var(--gray-700);
+}
+
+.hamburger.active span {
+  background: var(--gray-700) !important;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -716,6 +720,7 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .cta-section::before {
@@ -731,7 +736,7 @@ h1, h2, h3, h4, h5 {
 
 .cta-title {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 16px;
   font-family: var(--font-heading);
 }
@@ -739,19 +744,7 @@ h1, h2, h3, h4, h5 {
 .cta-desc {
   font-size: 1.1rem;
   opacity: 0.9;
-  margin-bottom: 36px;
-}
-
-.cta-phone {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: 24px;
-  opacity: 0.85;
-}
-
-.cta-phone a {
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
+  margin-bottom: 32px;
 }
 
 .cta-buttons {
@@ -1146,6 +1139,13 @@ h1, h2, h3, h4, h5 {
   border: none;
 }
 
+/* --- Roadmap Grid --- */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   :root {
@@ -1179,6 +1179,10 @@ h1, h2, h3, h4, h5 {
     grid-template-columns: 1fr;
   }
 
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
   .teachers-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1190,29 +1194,108 @@ h1, h2, h3, h4, h5 {
 
 @media (max-width: 768px) {
   :root {
-    --section-gap: 64px;
-    --container-padding: 20px;
+    --section-gap: 56px;
+    --container-padding: 16px;
   }
 
+  /* Center align everything on mobile */
+  .split,
+  .split > * {
+    text-align: center;
+  }
+
+  .split-label {
+    display: block;
+  }
+
+  .split-list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .split .btn {
+    margin: 0 auto;
+  }
+
+  .perk-card {
+    text-align: center;
+  }
+
+  .perk-icon {
+    margin: 0 auto 20px;
+  }
+
+  .philosophy-card {
+    text-align: center;
+  }
+
+  .curriculum-card {
+    text-align: center;
+  }
+
+  .curriculum-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .curriculum-topics {
+    justify-content: center;
+  }
+
+  .contact-info-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .director-quote {
+    text-align: center;
+    align-items: center;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .footer-brand {
+    text-align: left;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+
+  /* Hero */
   .hero {
-    min-height: auto;
-    padding: 120px 20px 60px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 100px 16px 48px;
   }
 
   .hero-tagline {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.35;
   }
 
   .hero-logo {
-    width: 140px;
+    width: 120px;
+    margin-bottom: 28px;
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    padding: 0 8px;
   }
 
-  .page-hero-title {
-    font-size: 2rem;
+  /* Nav */
+  .nav-inner {
+    height: 56px;
+  }
+
+  .nav-logo img {
+    height: 32px;
   }
 
   .nav-menu {
@@ -1236,45 +1319,264 @@ h1, h2, h3, h4, h5 {
   }
 
   .nav-menu a {
-    font-size: 1.2rem;
-    padding: 12px 24px;
+    font-size: 1.15rem;
+    padding: 14px 28px;
+    color: var(--gray-700) !important;
+  }
+
+  .nav-menu a.active,
+  .nav-menu a:hover {
+    color: var(--color-primary) !important;
+    background: var(--brown-50) !important;
+  }
+
+  .nav-menu .nav-cta {
+    background: var(--color-primary) !important;
+    color: #fff !important;
+    margin-top: 8px;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .perks-grid {
-    grid-template-columns: 1fr;
+  /* Typography */
+  .section-title {
+    font-size: 1.5rem;
   }
 
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    padding: 3px 12px;
+  }
+
+  .page-hero {
+    padding: 110px 0 48px;
+  }
+
+  .page-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .page-hero-desc {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  /* Split sections */
+  .split-title {
+    font-size: 1.4rem;
+  }
+
+  .split-text {
+    font-size: 0.92rem;
+  }
+
+  .split-label {
+    font-size: 0.8rem;
+  }
+
+  .split-list li {
+    font-size: 0.92rem;
+    margin-bottom: 10px;
+  }
+
+  .split-image {
+    aspect-ratio: 4/3;
+    max-height: 400px;
+  }
+
+  .split-image[style*="3/4"],
+  .split-image:has(img[alt*="대표원장"]) {
+    aspect-ratio: 3/4;
+    max-height: 420px;
+  }
+
+  /* Cards */
+  .perks-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .perk-card {
+    padding: 24px 20px;
+  }
+
+  .perk-title {
+    font-size: 1rem;
+  }
+
+  .perk-desc {
+    font-size: 0.85rem;
+  }
+
+  .philosophy-card {
+    padding: 28px 24px;
+  }
+
+  .curriculum-card {
+    padding: 28px 20px;
+  }
+
+  .curriculum-name {
+    font-size: 1.1rem;
+  }
+
+  .curriculum-desc {
+    font-size: 0.88rem;
+  }
+
+  /* Stats */
+  .stagger[style*="grid-template-columns:repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .stagger[style*="grid-template-columns:repeat(4"] > div {
+    padding: 20px 12px !important;
+  }
+
+  .stagger[style*="grid-template-columns:repeat(4"] p[data-count] {
+    font-size: 2rem !important;
+  }
+
+  /* Teachers */
   .teachers-grid {
     grid-template-columns: 1fr;
   }
 
+  .teacher-photo {
+    aspect-ratio: 16/9;
+  }
+
+  .teacher-info {
+    padding: 20px;
+  }
+
+  /* Director */
+  .director-quote {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .director-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .director-text {
+    font-size: 1rem;
+  }
+
+  /* Contact */
+  .contact-form {
+    padding: 28px 20px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .contact-info-card {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  /* CTA */
+  .cta-title {
+    font-size: 1.4rem;
+  }
+
+  .cta-desc {
+    font-size: 0.95rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .cta-phone {
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.92rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 48px 0 24px;
+  }
+
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     text-align: center;
+    font-size: 0.75rem;
   }
 
-  .director-quote {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px;
+  /* Map */
+  .map-container {
+    aspect-ratio: 16/9;
+  }
+
+  /* Roadmap cards on mobile */
+  .roadmap-grid .fade-in {
+    padding: 28px 20px !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .hero-tagline {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
   }
 
   .split-title {
-    font-size: 1.6rem;
+    font-size: 1.25rem;
   }
 
   .cta-title {
-    font-size: 1.6rem;
+    font-size: 1.25rem;
+  }
+
+  .stagger[style*="grid-template-columns:repeat(4"] {
+    grid-template-columns: 1fr !important;
   }
 }
 

@@ -107,4 +107,31 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
+  // --- Results tab switching ---
+  const resultsTabs = document.querySelectorAll('.results-tab');
+  const resultsPanels = document.querySelectorAll('.results-panel');
+
+  if (resultsTabs.length) {
+    resultsTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const year = tab.dataset.year;
+        resultsTabs.forEach(t => t.classList.remove('active'));
+        resultsPanels.forEach(p => {
+          p.classList.remove('active');
+          p.classList.remove('visible');
+        });
+        tab.classList.add('active');
+        const panel = document.querySelector(`.results-panel[data-year="${year}"]`);
+        if (panel) {
+          panel.classList.add('active');
+          // Trigger fade-in animation
+          requestAnimationFrame(() => panel.classList.add('visible'));
+        }
+      });
+    });
+    // Ensure the initially active panel is visible
+    const activePanel = document.querySelector('.results-panel.active');
+    if (activePanel) activePanel.classList.add('visible');
+  }
+
 });

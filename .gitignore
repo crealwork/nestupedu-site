@@ -5,3 +5,5 @@ generate-images.mjs
 edit-image.mjs
 package.json
 package-lock.json
+
+.vercel
